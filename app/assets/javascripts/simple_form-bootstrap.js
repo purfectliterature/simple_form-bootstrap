@@ -6,16 +6,16 @@
   'use strict';
   function initializeComponents(node) {
     // Enable our date/time pickers
-    var datePickers = $('input.bootstrap-datepicker', node);
-    datePickers.datetimepicker();
+    const datePickers = $('input.bootstrap-datepicker', node);
+    datePickers?.datetimepicker?.();
 
     // Enable our styled Bootstrap select controls, only when using the default select collection.
-    var selects = $('select.select.form-control', node);
-    selects.selectpicker();
+    const selects = $('select.select.form-control', node);
+    selects?.selectpicker?.();
 
     // Token fields for select inputs.
-    var tokenfields = $('.token select.token', node);
-    tokenfields.tokenfield();
+    const tokenfields = $('.token select.token', node);
+    tokenfields?.tokenfield?.();
   }
 
   $(function() {
