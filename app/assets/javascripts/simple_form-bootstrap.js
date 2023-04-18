@@ -7,15 +7,18 @@
   function initializeComponents(node) {
     // Enable our date/time pickers
     const datePickers = $('input.bootstrap-datepicker', node);
-    datePickers?.datetimepicker?.();
+    if (typeof datePickers === 'object' && typeof datePickers.datetimepicker === 'function')
+      datePickers.datetimepicker();
 
     // Enable our styled Bootstrap select controls, only when using the default select collection.
     const selects = $('select.select.form-control', node);
-    selects?.selectpicker?.();
+    if (typeof selects === 'object' && typeof selects.selectpicker === 'function')
+      selects.selectpicker();
 
     // Token fields for select inputs.
     const tokenfields = $('.token select.token', node);
-    tokenfields?.tokenfield?.();
+    if (typeof tokenfields === 'object' && typeof tokenfields.tokenfield === 'function')
+      tokenfields.tokenfield();
   }
 
   $(function() {
